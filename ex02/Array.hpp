@@ -43,7 +43,7 @@ public:
 
 	const DATA& operator[](unsigned const int index) const {
 		if (index >= array_size)
-			throw (std::exception());
+			throw (ArrayUncorrectIndex());
 		return mem_ptr[index];
 	}
 
