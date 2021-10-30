@@ -26,9 +26,9 @@ LIBS_INC=			${foreach LIBS, ${LIBS}, ${LIBS_INC_F}}
 
 LIBS_HEADERS=		${patsubst %.a, %.h, ${LIBS}}
 
-HEADERS_CPP=		${patsubst %.cpp, %.hpp, ${SRCS_CLASSES}}
+HEADERS_CPP=		${patsubst %.cpp, %.hpp, ${SRCS_CLASSES}} Array.hpp
 
-HEADERS_CPP_B=		iter.hpp
+HEADERS_CPP_B=
 
 HEADERS=			${LIBS_HEADERS} ${HEADERS_CPP}
 
@@ -53,7 +53,7 @@ endif
 
 OBJS_CPP=			${SRCS_CPP:.cpp=.o}
 
-NAME=				Iter
+NAME=				Array
 
 CC=					clang++
 RM=					rm -f
